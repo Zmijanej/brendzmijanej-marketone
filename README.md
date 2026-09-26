@@ -4,12 +4,12 @@ Prototip responsiv për një operator marketi që hyn në një sesion të simulu
 
 ## Çfarë përfshin
 
-- Hyrje dhe dalje të simuluar, të etiketuara qartë si jo të sigurta.
+- Hyrje dhe dalje të simuluar.
 - Katalog nga API-ja publike [DummyJSON Products](https://dummyjson.com/docs/products), me loading, gabim/riprovim dhe katalog bosh.
 - Kërkim sipas emrit, filtër kategorie dhe pastrim filtrash.
 - Draft porosie me shtim, ndryshim sasie, heqje, total rreshti dhe total porosie.
 - Kufizim sipas stokut dhe produkt i padisponueshëm.
-- Layout desktop/mobile dhe shirit mobile me numrin e artikujve, totalin dhe lidhjen te porosia.
+- Layout desktop/mobile dhe shiriti mobile me numrin e artikujve, totalin dhe lidhjen te porosia.
 
 Prototipi **nuk** kryen autentikim real, checkout, pagesë, rezervim stoku, ruajtje ose dërgim porosie. Nuk përmban eksperiencën Merchant; ajo trajtohet në [propozimin teknik](docs/propozimi-teknik.html).
 
