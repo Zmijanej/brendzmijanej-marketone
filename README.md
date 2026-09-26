@@ -132,5 +132,3 @@ Deklarimi i veprimeve personale të kandidatit:
 
 - GitHub: (https://github.com/Zmijanej/brendzmijanej-marketone)
 - Live: nuk është publikuar; shtoni URL-në vetëm pasi deployment të jetë kryer dhe verifikuar.
-
-Asnjë push në GitHub ose deployment nuk pretendohet në këtë repository.
