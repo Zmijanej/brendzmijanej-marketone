@@ -13,20 +13,58 @@ Prototip responsiv për një operator marketi që hyn në një sesion të simulu
 
 Prototipi **nuk** kryen autentikim real, checkout, pagesë, rezervim stoku, ruajtje ose dërgim porosie. Nuk përmban eksperiencën Merchant; ajo trajtohet në [propozimin teknik](docs/propozimi-teknik.html).
 
-## Parakushtet dhe nisja
+## Si ta nisni në kompjuterin tuaj
 
-- Node.js `22.13+` (verifikuar me Node.js `24.11.1`)
-- pnpm `11.19.0` (versioni fiksohet edhe te `packageManager`)
-- Lidhje interneti për instalim, fontin dhe API-në DummyJSON
+Nuk nevojitet databazë, llogari ose API key. Nevojitet vetëm interneti dhe Node.js.
+
+### 1. Instaloni Node.js
+
+Shkarkoni dhe instaloni **Node.js 24 LTS** nga [nodejs.org](https://nodejs.org/). Pas instalimit, mbyllni dhe hapni përsëri terminalin.
+
+Kontrolloni instalimin:
+
+```bash
+node --version
+```
+
+Duhet të shfaqet `v24` ose një version më i ri. Versioni minimal i mbështetur është `22.13.0`.
+
+### 2. Merrni dhe hapni projektin
+
+Shkarkoni repository-n me **Code → Download ZIP** dhe shpaketojeni, ose përdorni `git clone`. Pastaj hapni Terminal/PowerShell brenda dosjes së projektit, aty ku ndodhet `package.json`.
+
+### 3. Instaloni pnpm dhe paketat
+
+Kopjoni komandat më poshtë një nga një:
 
 ```bash
 corepack enable
-corepack prepare pnpm@11.19.0 --activate
+corepack install --global pnpm@11.19.0
 pnpm install
+```
+
+Nëse komanda `corepack` nuk ekziston, përdorni këtë alternativë dhe pastaj ekzekutoni `pnpm install`:
+
+```bash
+npm install --global pnpm@11.19.0
+```
+
+### 4. Nisni aplikacionin
+
+```bash
 pnpm dev
 ```
 
-Hapni `http://localhost:3000`. Nëse Corepack nuk përfshihet në instalimin e Node.js, instaloni pnpm sipas dokumentacionit zyrtar dhe ekzekutoni të njëjtat komanda `pnpm`.
+Prisni derisa terminali të tregojë se serveri është gati, pastaj hapni [http://localhost:3000](http://localhost:3000) në Google Chrome, Edge, Firefox ose Safari.
+
+Për ta ndalur aplikacionin, kthehuni te terminali dhe shtypni `Ctrl + C`.
+
+### Probleme të zakonshme
+
+- **Shfaqet `node:sqlite` ose një paralajmërim për Node.js:** po përdoret një version i vjetër. Instaloni Node.js 24 LTS, hapni terminal të ri dhe provoni përsëri.
+- **Porta 3000 është e zënë:** niseni në një port tjetër me `pnpm exec next dev -p 3001`, pastaj hapni `http://localhost:3001`.
+- **PowerShell nuk njeh `pnpm`:** mbyllni dhe hapni PowerShell pas instalimit. Në Windows mund të provoni edhe `pnpm.cmd install` dhe `pnpm.cmd dev`.
+- **Produktet nuk shfaqen:** kontrolloni lidhjen me internetin, sepse katalogu ngarkohet nga DummyJSON.
 
 ## Kontrollet
 
