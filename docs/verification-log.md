@@ -68,3 +68,11 @@ Përditësimi i fundit: 2026-09-29
 ### Kufijtë e evidencës
 
 Këto janë kontrolle lokale të një prototipi me të dhëna fiktive, jo provë deployment-i ose integrimi bankar. Nuk u krye dërgim real kredie, autentikim real, ngarkim dokumentesh private, audit sigurie prodhimi ose studim me tregtarë. Build-i prodhues mbetet një prototip me ruajtje në browser. Rezultatet më të vjetra sipër ruhen si histori.
+
+## Menuja mobile — 2026-09-29
+
+- U implementua opsioni 2: header kompakt sticky dhe drawer modal me lartësinë e viewport-it, sfond të errësuar, buton mbylljeje të përhershëm dhe navigim që scroll-on veçmas.
+- Hapja bllokon scroll-in e faqes. Mbyllja rikthen pozicionin dhe fokusin; funksionojnë butoni, sfondi, Escape, destinacioni i zgjedhur dhe browser back. Kalimi në desktop mbyll modalin dhe çliron faqen.
+- Chrome/Playwright: 12/12 kontrolle kaluan në 390 × 844, 844 × 390, 320 × 568 dhe desktop 1280 × 900. U kontrolluan Tab/Shift+Tab, wheel dhe touch në sfond, lëvizja në drawer, rikthimi i scroll-it dhe preferenca reduced-motion. Pa gabime JavaScript të faqes. Screenshot-et mobile dhe landscape u inspektuan vizualisht.
+- 6/6 testet ekzistuese të ndërfaqes merchant kaluan. Lint pa paralajmërime, TypeScript dhe production build me 11/11 faqe statike kaluan. `git diff --check` kaloi.
+- Verifikimi i prekjes përdori emulimin e Chrome; nuk përfshin testim në pajisje fizike ose Safari iOS.
