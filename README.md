@@ -1,4 +1,53 @@
-# MarketOne — Paneli i Operatorit
+# MarketOne — Hapësira e biznesit
+
+Prototip interaktiv në shqip për një tregtar të vogël: panel me veprime konkrete, operacione bazë dhe aplikim për mikro-kredi me bankë të simuluar.
+
+## Versioni aktual
+
+- Panel me detyra, shitje të MarketOne, pagesa në pritje dhe aktivitet.
+- Konfirmim porosish; detaje pagesash; shtim/ndryshim produktesh; profil biznesi.
+- Aplikim me pesë hapa, ruajtje lokale, mostra dokumentesh, autorizim për versionin e rishikuar dhe paketë historike.
+- Simulator me marrje, shqyrtim, kërkesë dokumenti, miratim/refuzim dhe rikuperim pas timeout-it pa dublikim.
+- Gjendje bosh, gabim, ngarkim dhe rikuperim; layout desktop/mobile.
+- Rrjedha e mëparshme e katalogut ruhet veçmas te `/legacy-demo`.
+
+**Hyrja, dokumentet dhe banka janë demonstrime. Përdorni vetëm të dhëna fiktive.** Draftet ruhen në këtë browser, edhe pas daljes; nuk janë të dhëna të ruajtura në një llogari të sigurt bankare. Nuk kryhen kërkesa reale kredie.
+
+## Nisja e shpejtë
+
+Përdorni Node.js sipas kërkesave të projektit dhe pnpm-in e deklaruar në `package.json`.
+
+```bash
+pnpm install
+pnpm dev
+```
+
+Hapni adresën që shfaq terminali, zakonisht [http://localhost:3000](http://localhost:3000). Hyrja kryesore çon te `/overview`; klikoni **Hyr në hapësirën e biznesit**. Në Windows mund të përdorni `pnpm.cmd`.
+
+Lexoni [udhëzuesin e demonstrimit](docs/merchant-demo-guide.md) për rrugët, shembullin e plotë të aplikimit, kontrollet e bankës, ruajtjen dhe rikuperimin.
+
+## Kontrolli dhe materialet
+
+```bash
+pnpm typecheck
+pnpm lint
+pnpm test
+pnpm build
+pnpm start
+```
+
+- [Udhëzuesi i prototipit funksional](docs/merchant-demo-guide.md)
+- [Koncepti UX me skica të shpjeguara](docs/marketone-merchant-revision.html) dhe [burimi Markdown](docs/marketone-merchant-revision.md)
+- [Rezultatet e verifikimit](docs/verification-log.md)
+- [Vendimet dhe deklarimi i AI-së](docs/decision-log.md)
+
+Implementimi i ri është në `src/merchant/`; layout-i dhe rrugët ndodhen në grupin merchant të App Router. Nuk janë shtuar paketa runtime, databazë ose endpoint-e financiare.
+
+## Materiali historik
+
+Pjesa më poshtë dokumenton prototipin fillestar të porositjes. Në versionin aktual ai hapet te `/legacy-demo`. Shifrat e testeve dhe deklarimet e datuara aty janë historike; rezultatet e reja gjenden te regjistri i verifikimit.
+
+## Prototipi i mëparshëm — paneli i porositjes
 
 Prototip responsiv për një operator marketi që hyn në një sesion të simuluar, shfleton një katalog publik, kërkon dhe filtron produkte, dhe ndërton një draft porosie brenda kufijve të stokut.
 
@@ -11,7 +60,7 @@ Prototip responsiv për një operator marketi që hyn në një sesion të simulu
 - Kufizim sipas stokut dhe produkt i padisponueshëm.
 - Layout desktop/mobile dhe shiriti mobile me numrin e artikujve, totalin dhe lidhjen te porosia.
 
-Prototipi **nuk** kryen autentikim real, checkout, pagesë, rezervim stoku, ruajtje ose dërgim porosie. Nuk përmban eksperiencën Merchant; ajo trajtohet në [propozimin teknik](docs/propozimi-teknik.html).
+Prototipi **nuk** kryen autentikim real, checkout, pagesë, rezervim stoku, ruajtje ose dërgim porosie. Eksperienca e rishikuar e biznesit trajtohet te [koncepti i ri UX](docs/marketone-merchant-revision.html). [Propozimi teknik fillestar](docs/propozimi-teknik.html) ruhet si material historik.
 
 ## Si ta nisni në kompjuterin tuaj
 

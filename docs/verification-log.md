@@ -1,6 +1,6 @@
 # Regjistri i verifikimit
 
-Përditësimi i fundit: 2026-09-26
+Përditësimi i fundit: 2026-09-29
 
 ## Kontrollet automatike
 
@@ -33,3 +33,38 @@ Përditësimi i fundit: 2026-09-26
 
 - Më 2026-09-26, kandidati raportoi se e testoi aplikacionin në Google Chrome dhe se aplikacioni funksionoi siç pritej. Versioni i browser-it, viewport-et dhe lista e skenarëve nuk u regjistruan.
 - Më 2026-09-26, kandidati konfirmoi në print preview se propozimi shfaqet në saktësisht 2 faqe A4 pa përmbajtje të prerë.
+
+## Rishikimi UX — 2026-09-28
+
+- U krijuan `docs/marketone-merchant-revision.md` dhe `.html`: 9 seksione, 8 skica ekranesh dhe 1 rrjedhë e transmetimit te banka.
+- Kontrolli i strukturës HTML konfirmoi `lang="sq"`, lidhje të brendshme pa destinacione të munguara, zero skripte dhe zero burime të jashtme. Dokumenti hapet lokalisht pa server ose lidhje interneti.
+- U inspektuan vizualisht kopertina dhe skica e panelit në Chrome headless. Matjet në viewport desktop 1440 × 1100 dhe mobile 390 × 844 nuk treguan overflow horizontal; në mobile `innerWidth` dhe `scrollWidth` ishin të dy 390.
+- `git diff --check` kaloi. U shfaq vetëm paralajmërimi i Git për normalizimin LF/CRLF.
+- Nuk u ndryshua kodi i aplikacionit, paketat ose konfigurimi. Kontrollet typecheck/lint/test/build të aplikacionit nuk u riekzekutuan për këtë ndryshim dokumentimi; rezultatet e 2026-09-26 më sipër mbeten historike.
+- Nuk u testuan shërbime bankare, ruajtje formularësh, autentikim, kontrolle sigurie në prodhim ose përdorshmëri me tregtarë. Këto janë kërkesa dhe skenarë të propozuar në koncept. Printimi ka stile të posaçme; faqosja e një eksporti PDF nuk u verifikua.
+
+## Prototipi interaktiv i biznesit — 2026-09-29
+
+| Kontrolli | Rezultati | Evidenca |
+| --- | --- | --- |
+| TypeScript | Kalon | `tsc --noEmit`, pa gabime. |
+| ESLint | Kalon | `pnpm.cmd lint`, zero gabime/paralajmërime. Pas bllokimit të leximit të dosjes ekzistuese .gstack në sandbox, kontrolli u përsërit me lejen e nevojshme. |
+| Testet | Kalojnë | 4 skedarë, 47/47 teste: 13 ekzistuese dhe 34 të reja. Pas korrigjimit final të inicializimit, u përsëritën edhe 6/6 testet e ndërfaqes me sukses. |
+| Production build | Kalon | `pnpm.cmd build`: compile, TypeScript dhe 11/11 faqe statike. Fonti ekzistues Manrope kërkoi qasje në rrjet; build-i i përsëritur me leje përfundoi me sukses. |
+| Chrome / Playwright | Kalon | 29 kontrolle mbi serverin lokal `next start`, pa gabime JavaScript të faqes. |
+| Diff | Kalon | `git diff --check`; vetëm njoftime LF/CRLF. |
+
+### Rrjedhat e verifikuara
+
+- Paneli në desktop 1440 px, tablet 768 px dhe mobile 390 px; konfirmimi i detyrës dhe browser back. Menuja mobile hapet dhe mbyllet me Escape.
+- Drafti ruhet dhe rikthehet pas refresh; testet e ndërfaqes mbulojnë edhe logout, dështimin e ruajtjes, të dhënat e dëmtuara dhe konfigurimin e një biznesi të ri.
+- Formulari, dokumentet mostër, dështimi/riprovimi i formatit, rishikimi dhe çaktivizimi i autorizimit pas ndryshimit të të dhënave.
+- Timeout-i, refresh-i dhe marrja e konfirmuar përdorin të njëjtën referencë. Kërkesa për dokument shtesë shfaqet në panel dhe përgjigjja ka autorizim të veçantë.
+- Miratimi dhe refuzimi i simuluar; versioni historik mbetet i lexueshëm dhe nuk ndryshon pas redaktimit të profilit. Paketa shtesë kufizohet te dokumenti i ri, periudha, banka dhe referenca fillestare.
+- Rrugët e operacioneve në desktop/mobile pa overflow horizontal. Kontroll shtesë reflow në 720 CSS px, ekuivalent i hapësirës në 200% në ekran 1440 px; nuk u krye zoom native i browser-it.
+- Zero input-e skedarësh realë dhe zero kërkesa të jashtme nga rrugët merchant. Katalogu i vjetër te /legacy-demo u testua me DummyJSON të zëvendësuar me fixture, duke ruajtur login-in dhe porositjen.
+- U inspektuan screenshot-et e panelit desktop/mobile dhe rishikimit të aplikimit.
+
+### Kufijtë e evidencës
+
+Këto janë kontrolle lokale të një prototipi me të dhëna fiktive, jo provë deployment-i ose integrimi bankar. Nuk u krye dërgim real kredie, autentikim real, ngarkim dokumentesh private, audit sigurie prodhimi ose studim me tregtarë. Build-i prodhues mbetet një prototip me ruajtje në browser. Rezultatet më të vjetra sipër ruhen si histori.

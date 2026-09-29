@@ -38,3 +38,22 @@ Ky dokument dallon udhëzimet dhe vendimet e kandidatit nga zgjedhjet e propozua
 | 2026-09-26 | Validim trim-aware për emrin e operatorit, me gabim inline të aksesueshëm. | Atributi HTML `required` pranonte një vlerë me vetëm hapësira, ndërsa sesioni ruante emër bosh pas `trim()`. | Testet automatike kalojnë; kandidati raportoi se aplikacioni funksionoi siç pritej në Google Chrome. |
 | 2026-09-26 | Forma njëjës “1 artikull” në përmbledhjen e porosisë. | Korrigjonte tekstin “1 artikuj” dhe emrin e aksesueshëm të badge-it. | Testet automatike kalojnë; kandidati raportoi se aplikacioni funksionoi siç pritej në Google Chrome. |
 | 2026-09-26 | Dy teste integrimi për emrin me hapësira dhe filtrin e kategorisë. | Mbulon regresionin e login-it dhe sjelljen e filtrimit nga këndvështrimi i përdoruesit. | 2 test files dhe 13/13 teste kalojnë. |
+
+## Rishikimi i konceptit — 2026-09-28
+
+- Përdoruesi kërkoi që biznesi të jetë në qendër, me vëmendje te portali i mikro-kredisë dhe paneli i operatorit.
+- U konfirmuan dorëzimi si koncept UX me plan ekranesh, dyqani i vogël i pavarur si audiencë dhe aktiviteti i MarketOne si kufi i të dhënave të panelit.
+- Codex përgatiti tetë skica statike me shpjegime, rrjedhën e propozuar të bankës, gjendjet e rikuperimit, prioritetet dhe kriteret e validimit në `marketone-merchant-revision.md` dhe `.html`.
+- UI-ja e skicave dhe teksti mbetën në shqip, duke ndjekur materialet ekzistuese. Banka, kriteret, kushtet dhe juridiksioni nuk u supozuan si të konfirmuara.
+- Ky dorëzim nuk ndryshon aplikacionin e katalogut dhe nuk implementon një shërbim kredie. Autorizimi për implementimin e planit u përdor për të përfunduar dokumentet pa pika të reja miratimi.
+- Nuk pretendohet testim me tregtarë ose verifikim personal nga kandidati; skenarët e validimit mbeten propozime.
+
+## Implementimi i hapësirës së biznesit — 2026-09-29
+
+- Përdoruesi miratoi prototipin interaktiv, ruajtjen në të njëjtin browser, rrjedhat mbështetëse funksionale dhe ruajtjen e aplikacionit të vjetër në një rrugë të veçantë.
+- Codex implementoi hapësirën merchant me Context/reducer, repository lokal të versionuar dhe domen të veçuar nga katalogu i vjetër. Nuk u shtuan varësi runtime.
+- Dokumentet zgjidhen nga mostra të integruara; nuk lexohet filesystem-i i përdoruesit dhe nuk transmetohet aplikim në bankë. Kontrollet dhe përgjigjet bankare janë të emërtuara si simulime.
+- Paketa fillestare ruan formën, dokumentet, raportin dhe autorizimin për versionin. Përgjigjja shtesë ruan vetëm dokumentin e ri, periudhën, bankën demo dhe referencën e aplikimit.
+- Monedha paraqitet shprehimisht si USD; datat përdorin emërtim shqip edhe në browser-a me mbështetje të kufizuar për locale.
+- Testet ekzistuese të porositjes u ruajtën. U shtuan teste të domenit, ruajtjes dhe rrjedhave UI; verifikimet e ekzekutuara dokumentohen veçmas.
+- Nuk pretendohet testim personal nga kandidati, studim përdorshmërie me tregtarë, integrim bankar real ose gatishmëri prodhimi.

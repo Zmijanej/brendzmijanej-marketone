@@ -8,8 +8,8 @@ const manrope = Manrope({
 })
 
 export const metadata: Metadata = {
-  title: 'MarketOne · Paneli i Operatorit',
-  description: 'Prototip i panelit të operatorit MarketOne',
+  title: 'MarketOne · Hapësira e biznesit',
+  description: 'Paneli i biznesit dhe aplikimi për mikro-kredi — prototip demonstrues MarketOne',
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

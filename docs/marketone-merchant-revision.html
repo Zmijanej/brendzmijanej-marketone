@@ -1,0 +1,208 @@
+<!doctype html><html lang="sq"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Koncepti i rishikuar i MarketOne: paneli i biznesit dhe portali i mikro-kredisë me skica të shpjeguara."><title>MarketOne — Biznesi në qendër</title><style>:root{color-scheme:light;--ink:#17211d;--forest:#174f3d;--muted:#52615a;--line:#d5ded7;--paper:#fff;--canvas:#f4f6f2}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--canvas);color:var(--ink);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}a{color:var(--forest);text-underline-offset:4px}a:focus-visible{outline:3px solid var(--forest);outline-offset:5px}.skip{position:absolute;left:16px;top:-100px;background:white;padding:12px}.skip:focus{top:16px}.top{max-width:1400px;margin:auto;padding:24px 40px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;font-size:13px}.top strong{font-size:18px}.layout{max-width:1400px;margin:auto;display:grid;grid-template-columns:250px minmax(0,1fr);gap:48px;padding:48px 40px 80px}nav{align-self:start;position:sticky;top:28px}nav p,.kicker{font-size:11px;letter-spacing:.12em;font-weight:750;color:var(--forest)}nav a{display:block;padding:9px 0;border-bottom:1px solid var(--line);text-decoration:none;font-size:13px;line-height:1.5}nav a:hover{text-decoration:underline}main{min-width:0}.cover{padding-bottom:40px}.cover>p:first-of-type{color:var(--muted);font-size:14px}h1{font-size:clamp(32px,4vw,54px);line-height:1.12;letter-spacing:-.04em;max-width:850px;margin:18px 0 24px}h2{font-size:27px;line-height:1.25;letter-spacing:-.025em;margin:0 0 24px}h3{font-size:20px;line-height:1.4;margin:32px 0 16px}p{margin:14px 0}section{border-top:2px solid var(--forest);padding:32px 0 48px}ul{padding-left:24px}li{padding:4px 0}.table-wrap{margin:24px 0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55;table-layout:fixed}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:13px 12px;overflow-wrap:anywhere}th{background:#e6ede6;font-weight:700}td:first-child{font-weight:600}figure{margin:24px 0 28px;border:1px solid #b9c9be;border-radius:8px;overflow:hidden;background:var(--paper)}figcaption{background:var(--forest);color:white;padding:12px 20px;font-size:10px;font-weight:700;letter-spacing:.09em}pre{margin:0;padding:26px;color:#173829;font:13px/1.95 Consolas,ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere}.flow{background:#e9f0e8}.flow pre{font-size:13px}footer{border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:13px}.hint{font-size:12px;color:var(--muted)}@media(max-width:1000px){.layout{grid-template-columns:190px minmax(0,1fr);gap:28px;padding:32px 24px}pre{font-size:11px;padding:18px}}@media(max-width:760px){.top{padding:20px;flex-wrap:wrap}.layout{display:block;padding:24px 20px 48px}nav{position:static;margin-bottom:36px}nav a{padding:9px 0}h1{font-size:36px}h2{font-size:24px}pre{font-size:11px;line-height:1.8;padding:16px}th,td{padding:10px 6px;font-size:12px}figcaption{padding:10px 16px;letter-spacing:.03em}}@media print{@page{size:A4;margin:16mm}body{background:white;font-size:10pt;line-height:1.5}.top,nav,.skip{display:none}.layout{display:block;padding:0;margin:0}.cover{padding:0 0 8mm}h1{font-size:30pt}h2{font-size:18pt}h3{font-size:13pt;break-after:avoid}section{padding:8mm 0;break-before:page}figure{break-inside:avoid}pre,.flow pre{font-size:9pt;line-height:1.6;padding:5mm}figcaption{font-size:8pt;background:#e6ede6;color:#17211d}table{font-size:9pt}th,td{padding:3mm 2mm}thead{display:table-header-group}tr{break-inside:avoid}a{color:inherit}footer{font-size:9pt}}</style></head><body><a class="skip" href="#content">Kalo te përmbajtja</a><div class="top"><strong>MarketOne</strong><span>Koncept UX / 28.09.2026 / Skica statike</span><a href="marketone-merchant-revision.md">Burimi Markdown</a></div><div class="layout"><nav aria-label="Përmbajtja e dokumentit"><p>NË KËTË RISHIKIM</p><a href="#section-1">01 — Nevoja e biznesit dhe drejtimi i ri</a><a href="#section-2">02 — Paneli pas hyrjes</a><a href="#section-3">03 — Portali i mikro-kredisë</a><a href="#section-4">04 — Gjendjet e aplikimit dhe rikuperimi</a><a href="#section-5">05 — Si transmetohet kërkesa te banka</a><a href="#section-6">06 — Prioritetet dhe kufijtë</a><a href="#section-7">07 — Si vlerësohet koncepti</a><a href="#section-8">08 — Supozimet dhe vendimet përpara prodhimit</a><a href="#section-9">09 — Çfarë u dorëzua</a><p class="hint">Përdorni Print në browser për versionin e shtypur. Skicat nuk janë formularë aktivë.</p></nav><main id="content"><aside aria-label="Statusi i implementimit" style="border:1px solid #b9c9be;padding:20px;margin-bottom:32px;background:#e9f0e8"><h2>Nga koncepti te prototipi · 29.09.2026</h2><p>Ky dokument ruan konceptin e 28 shtatorit. Tani janë implementuar paneli, operacionet bazë, formulari, draftet në këtë browser dhe banka e simuluar. <a href="merchant-demo-guide.md">Lexoni udhëzuesin e prototipit funksional.</a></p><p>Dokumentet janë mostra të integruara; nuk ka ngarkim skedarësh realë, ruajtje në llogari të sigurt ose transmetim bankar. Këto mbeten kërkesa prodhimi. Pohimet e mëposhtme për funksionalitetin e paimplementuar përshkruajnë dorëzimin fillestar të konceptit.</p></aside><header class="cover"><div class="kicker">MARKETONE / RISHIKIMI I KONCEPTIT</div><h1>MarketOne — Biznesi në qendër</h1>
+<p>Koncept UX dhe plan ekranesh · 28 shtator 2026</p>
+<p><strong>Një hapësirë pune ku tregtari kupton aktivitetin, zgjidh çështjet e ditës dhe kërkon financim për biznesin.</strong></p>
+<p>Ky rishikim ndjek zgjedhjet e konfirmuara: dyqan i vogël i pavarur, panel i mbështetur fillimisht në aktivitetin e MarketOne dhe dorëzim si koncept UX me skica të shpjeguara.</p>
+<p>Skicat janë statike. Kontrollet e vizatuara nuk kryejnë veprime. Të gjitha shumat, ngjarjet dhe referencat janë ilustruese; nuk është dërguar aplikim ose dokument në bankë.</p></header><section id="section-1" aria-labelledby="section-1-title"><h2 id="section-1-title">01 — Nevoja e biznesit dhe drejtimi i ri</h2><p><strong>Skenari:</strong> pronarja e “Dyqanit të Lagjes” hyn në MarketOne, kontrollon porositë dhe pagesat e platformës, pastaj përgatit një kërkesë kredie për rimbushjen e stokut. Më vonë, banka kërkon një dokument shtesë; pronarja e gjen kërkesën në panel dhe vazhdon nga aty.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Nevoja</th><th scope="col">Përgjigjja e konceptit</th><th scope="col">Arsyeja e prioritetit</th></tr></thead><tbody><tr><td>Çfarë kërkon vëmendjen time?</td><td>Listë e shkurtër detyrash me veprim të drejtpërdrejtë.</td><td>Operatori duhet të veprojë pa interpretuar disa grafikë.</td></tr><tr><td>Si po ecën aktiviteti?</td><td>Shitje, porosi për veprim dhe pagesa për t’u marrë, me burim e periudhë.</td><td>Ofron orientim pa pretenduar pamje të plotë financiare.</td></tr><tr><td>Si kërkoj financim?</td><td>Formular me hapa, paraplotësim dhe ruajtje drafti.</td><td>Ul punën e përsëritur dhe lejon ndërprerjen.</td></tr><tr><td>Çfarë po ndodh me aplikimin?</td><td>Status, historik dhe kërkesa konkrete nga banka.</td><td>Zvogëlon pasigurinë dhe nevojën për të kërkuar sqarime jashtë platformës.</td></tr></tbody></table></div>
+<p>Në propozimin e mëparshëm, rrjedha kryesore ishte përgatitja e një porosie dhe kredia ishte shtyrë në fazën e dytë. Ky koncept vendos panelin e biznesit dhe aplikimin për mikro-kredi në prioritetin e parë.</p>
+<p><strong>Termat:</strong> biznesi është tregtari që i bashkohet rrjetit; operatori është personi i autorizuar që punon për të. Në skenar është pronarja. Për një punonjës, të drejtat për financimin caktohen veçmas. Banka është marrësi dhe vendimmarrësi i aplikimit.</p>
+<p><strong>Navigimi i propozuar:</strong> Përmbledhje · Shitje · Produkte · Pagesa · Financim · Profili i biznesit. Produktet shërbejnë për menaxhimin e biznesit brenda kësaj hapësire.</p></section><section id="section-2" aria-labelledby="section-2-title"><h2 id="section-2-title">02 — Paneli pas hyrjes</h2><h3>Ekrani A — Një ditë normale pune</h3>
+<figure class="screen"><figcaption>SKICË STATIKE · VEPRIMET JANË ILUSTRUESE</figcaption><pre>MarketOne                         Dyqani i Lagjes
+Përmbledhje / Shitje / Produkte / Pagesa / Financim / Profili
+
+Mirë se erdhët në biznesin tuaj
+
+[1] KËRKON VËMENDJEN TUAJ
+2 porosi presin konfirmim
+Kontrolloni disponueshmërinë dhe konfirmoni porositë.
+[ Shiko porositë ]
+
+[2] AKTIVITETI NË MARKETONE
+Shitje · 7 ditët e fundit                 1 240 USD
+Porosi për veprim · gjendja aktuale                2
+Pagesa për t’u marrë · gjendja aktuale       380 USD
+Përditësuar në 09:40 · Të dhëna ilustruese
+[ Shiko shitjet ]              [ Shiko pagesat ]
+
+[3] FINANCIMI I BIZNESIT
+Po planifikoni të rimbushni stokun?
+Përgatitni një kërkesë për shqyrtim nga banka.
+[ Fillo aplikimin ]
+
+[4] AKTIVITETI I FUNDIT
+09:40 · Porosi e re për konfirmim
+09:15 · Pagesë e kaluar te biznesi
+Dje   · Profili i biznesit u përditësua</pre></figure>
+<p><strong>1. Veprimi para statistikave.</strong> Detyrat me afat më të afërt shfaqen të parat, pastaj detyrat që bllokojnë një proces, pastaj detyrat e tjera; brenda të njëjtit nivel, më e vjetra vjen e para. Shfaqen deri në tri detyra dhe lidhja “Shiko të gjitha”. Nuk shpiken afate ose urgjencë.</p>
+<p><strong>2. Shifra me kuptim të kufizuar dhe të qartë.</strong> Shitjet i referohen porosive të përfunduara në MarketOne, duke përjashtuar anulimet. Dy treguesit e tjerë janë gjendje aktuale, jo vlera të periudhës së shitjeve. Pagesat e pritshme nuk janë bilanci bankar ose fitimi. Shfaqen monedha, burimi dhe koha e përditësimit; çdo kartë hap aktivitetin përkatës. Prototipi aktual nuk i siguron këto të dhëna: në koncept përdoren shembuj të shënuar.</p>
+<p><strong>3. Financimi përshtatet me situatën.</strong> Pa aplikim: “Fillo aplikimin”; me draft: “Vazhdo aplikimin”; pas dorëzimit: “Shiko statusin”. Një kërkesë dokumenti nga banka shfaqet edhe te detyrat. Një ftesë e përgjithshme për kredi nuk zëvendëson detyrat operative.</p>
+<p><strong>4. Histori e shkurtër.</strong> Çdo ngjarje çon te detajet e saj. Për ndryshimet e aplikimit shfaqet qartë nëse ngjarja vjen nga MarketOne ose banka.</p>
+<p>Në telefon ruhet rendi: detyrat → treguesit → financimi → aktiviteti. Navigimi kalon në një menu të emërtuar; nuk shtohet shirit porosie që mbulon veprimin e financimit.</p>
+<h3>Ekrani B — Biznes i sapobashkuar</h3>
+<figure class="screen"><figcaption>SKICË STATIKE · VEPRIMET JANË ILUSTRUESE</figcaption><pre>Dyqani i Lagjes
+Le ta përgatisim biznesin tuaj
+
+1. Plotëso profilin e biznesit          Për t’u bërë
+   Emri, aktiviteti, adresa dhe personi i autorizuar
+2. Konfiguro dyqanin                    Për t’u bërë
+   Kontakti dhe të dhënat operative
+3. Shto produktet                       Për t’u bërë
+   Emri, çmimi dhe disponueshmëria
+
+[ Plotëso profilin ]
+
+Ende nuk ka aktivitet në MarketOne.
+Shitjet dhe pagesat do të shfaqen këtu kur të ketë aktivitet.
+
+Financimi i biznesit
+Shihni çfarë nevojitet për të aplikuar.
+[ Shiko kërkesat ]</pre></figure>
+<p>Lista e konfigurimit ka një veprim kryesor dhe tregon përparimin real. Mungesa e historikut në MarketOne nuk interpretohet si refuzim ose papranueshmëri për kredi. Banka përcakton kriteret.</p>
+<h3>Gjendjet që paneli duhet të shpjegojë</h3>
+<div class="table-wrap"><table><thead><tr><th scope="col">Gjendja</th><th scope="col">Sjellja e propozuar</th></tr></thead><tbody><tr><td>Asnjë detyrë</td><td>“Nuk keni veprime në pritje.” Financimi mbetet i arritshëm pa krijuar urgjencë.</td></tr><tr><td>Ngarkim</td><td>Vendmbajtës të emërtuar; nuk shfaqen zero të përkohshme.</td></tr><tr><td>Dështim i një burimi</td><td>Gabim dhe “Provo përsëri” vetëm te zona përkatëse; pjesët e tjera mbeten të përdorshme.</td></tr><tr><td>Të dhëna të vjetruara</td><td>Tregohet përditësimi i fundit dhe dështimi i rifreskimit.</td></tr><tr><td>Të dhëna jashtë platformës</td><td>Nuk supozohen fitimi, shpenzimet totale, stoku i kasës ose bilanci bankar.</td></tr><tr><td>Dokument i kërkuar nga banka</td><td>Emri i dokumentit, arsyeja dhe afati vetëm nëse banka e ka dhënë; veprimi hap kërkesën përkatëse.</td></tr></tbody></table></div></section><section id="section-3" aria-labelledby="section-3-title"><h2 id="section-3-title">03 — Portali i mikro-kredisë</h2><p>Hyrja “Financim” shpjegon bankën marrëse, hapat, dokumentet paraprake dhe mënyrën e përdorimit të të dhënave. Identiteti i bankës dhe kërkesat e saj duhet të konfirmohen përpara një integrimi real.</p>
+<p><strong>Rrjedha:</strong> Nevoja → Biznesi dhe aplikuesi → Financat dhe dokumentet → Rishikimi dhe autorizimi → Statusi.</p>
+<p>Çdo hap ka “Kthehu” dhe “Ruaj dhe dil”. Të dhënat ruhen si draft në llogarinë e biznesit; mesazhi “U ruajt” shfaqet vetëm pas konfirmimit të ruajtjes. Në dështim: “Ndryshimet e fundit nuk u ruajtën — provo përsëri”, duke mbajtur formularin e hapur. Kjo është sjellje e propozuar, jo funksionalitet i implementuar në aplikacionin ekzistues.</p>
+<h3>Ekrani C — Hapi 1: Nevoja për financim</h3>
+<figure class="screen"><figcaption>SKICË STATIKE · VEPRIMET JANË ILUSTRUESE</figcaption><pre>Aplikimi për mikro-kredi                         Hapi 1 / 5
+
+Për çfarë ju nevojitet financimi?
+Shuma e kërkuar                                3 000 USD
+Qëllimi                                  Rimbushje stoku
+Periudha e preferuar                             12 muaj
+
+Përshkruani nevojën
+Blerje stoku për furnizimin e dyqanit gjatë muajit të ardhshëm.
+
+Banka shqyrton kërkesën dhe përcakton kushtet.
+Periudha e preferuar nuk është ofertë e miratuar.
+
+Draft i ruajtur
+[ Vazhdo te biznesi ]                 [ Ruaj dhe dil ]</pre></figure>
+<p>Fillojmë me qëllimin e pronarit. Shuma duhet të jetë pozitive; kufijtë dhe monedha varen nga produkti i bankës. USD përdoret vetëm për vazhdimësi me demonstrimin ekzistues. Nuk paraqitet këst, normë interesi, kohë miratimi ose mundësi miratimi pa të dhëna të konfirmuara nga banka.</p>
+<h3>Ekrani D — Hapi 2: Biznesi dhe aplikuesi</h3>
+<figure class="screen"><figcaption>SKICË STATIKE · VEPRIMET JANË ILUSTRUESE</figcaption><pre>Aplikimi për mikro-kredi                         Hapi 2 / 5
+
+Konfirmoni biznesin dhe aplikuesin
+Emri i biznesit                         Dyqani i Lagjes
+Aktiviteti                            Tregti me pakicë
+Numri i regjistrimit                  Për t’u plotësuar
+Adresa                                Nga profili · konfirmo
+Personi që aplikon                    Pronarja
+Email dhe telefon                     Nga profili · konfirmo
+
+Të dhënat nga profili mund të korrigjohen.
+Dokumenti i përfaqësimit kërkohet kur zbatohet.
+
+[ Vazhdo te financat ] [ Kthehu ] [ Ruaj dhe dil ]</pre></figure>
+<p>Paraplotësimi ul punën e përsëritur. Burimi i fushave është i dukshëm. Korrigjimet ruhen në aplikim; ndryshimi i profilit kërkon veprim të veçantë që të mos ndryshojë pa dashje të dhënat operative.</p>
+<p>Identiteti i aplikuesit dhe regjistrimi i biznesit trajtohen veçmas. Deklarimi “jam i autorizuar” nuk e zëvendëson verifikimin e rolit dhe kërkesave të bankës. Numrat e regjistrimit dhe të dhënat personale nuk janë shpikur në këtë skicë.</p>
+<h3>Ekrani E — Hapi 3: Financat dhe dokumentet</h3>
+<figure class="screen"><figcaption>SKICË STATIKE · VEPRIMET JANË ILUSTRUESE</figcaption><pre>Aplikimi për mikro-kredi                         Hapi 3 / 5
+
+Financat e deklaruara nga aplikuesja
+Periudha                             Gusht 2026
+Xhiro · të gjitha kanalet             8 000 USD
+Shpenzime · e njëjta periudhë          6 000 USD
+Detyrime kreditore ekzistuese         Nuk ka · e deklaruar
+
+Aktiviteti në MarketOne
+Raporti i platformës bashkëngjitet veçmas me burim,
+monedhë dhe periudhë të shënuar.
+
+Dokumente · listë ilustruese
+Regjistrimi i biznesit                Gati për rishikim
+Identiteti / përfaqësimi               Gati për rishikim
+Dokumenti i qarkullimit               Mungon
+[ Shto dokument ]
+
+[ Vazhdo te përmbledhja ] [ Kthehu ] [ Ruaj dhe dil ]</pre></figure>
+<p>Shifrat më të gjera deklarohen nga operatori; nuk paraqiten si të verifikuara nga MarketOne. Raporti i platformës nuk i shtohet automatikisht xhiros së deklaruar, sepse mund të jetë tashmë pjesë e saj. Nëse ka kredi ekzistuese, formulari mbledh detyrimin dhe pagesën periodike sipas kërkesave të bankës.</p>
+<p>Lista përfundimtare e dokumenteve përcaktohet nga banka. Për çdo dokument shpjegohen arsyeja, periudha, formatet dhe madhësia maksimale përpara ngarkimit. Në telefon ofrohet zgjedhja nga pajisja dhe fotografimi kur formati pranohet.</p>
+<p>Ngarkimi ka gjendje të veçanta: <strong>zgjedhur → duke u ngarkuar → në kontroll → gati</strong>. Zgjedhja e skedarit nuk është ruajtje e konfirmuar. Një dështim lejon riprovim ose zëvendësim pa humbur formularin. Skedarët refuzohen me arsye të kuptueshme nëse nuk kalojnë kontrollet.</p>
+<p>Mund të rishikohet një draft me mungesa të shënuara; dorëzimi bllokohet derisa fushat dhe dokumentet e detyrueshme të jenë të vlefshme.</p>
+<h3>Ekrani F — Hapi 4: Rishikimi dhe autorizimi</h3>
+<p>Skenari vazhdon pasi dokumenti që mungonte është shtuar dhe ka kaluar kontrollin.</p>
+<figure class="screen"><figcaption>SKICË STATIKE · VEPRIMET JANË ILUSTRUESE</figcaption><pre>Aplikimi për mikro-kredi                         Hapi 4 / 5
+
+Kontrolloni përpara dërgimit
+Biznesi                       Dyqani i Lagjes       [ Ndrysho ]
+Kërkesa                       3 000 USD / stok      [ Ndrysho ]
+Periudha e preferuar          12 muaj               [ Ndrysho ]
+Financat                      Gusht 2026            [ Ndrysho ]
+Dokumentet                    3 dokumente gati      [ Shiko ]
+
+Marrësi: banka partnere e emërtuar në produktin e financimit
+Identiteti i bankës mbetet për t’u konfirmuar në këtë koncept.
+
+Çfarë do të marrë banka?
+• Të dhënat e biznesit dhe të përfaqësuesit
+• Kërkesën dhe financat e deklaruara
+• Raportin e MarketOne për periudhën e treguar
+• Dokumentet e listuara më sipër
+
+[ ] Autorizoj MarketOne t’ia dërgojë bankës së emërtuar
+    këtë aplikim dhe të dhënat e listuara për shqyrtim.
+
+[ Dërgo aplikimin në bankë ] [ Kthehu ] [ Ruaj dhe dil ]</pre></figure>
+<p>Autorizimi nuk parazgjidhet. Marrësi dhe inventari i të dhënave duhet të jenë konkretë në implementimin real; nëse banka nuk është konfiguruar, dorëzimi nuk aktivizohet. Para dërgimit shfaqen informacioni i privatësisë dhe mënyra e kontaktit për pyetje mbi të dhënat.</p>
+<p>Kthimi te një hap ruan draftin. Nëse ndryshon paketa pas autorizimit, kërkohet autorizim i ri për versionin përfundimtar. Aplikuesi dërgon një kërkesë për shqyrtim; kjo nuk është pranim kontrate kredie.</p>
+<h3>Ekrani G — Hapi 5: Gjurmimi</h3>
+<figure class="screen"><figcaption>SKICË STATIKE · VEPRIMET JANË ILUSTRUESE</figcaption><pre>Aplikimi MO-DEMO-024                             Hapi 5 / 5
+
+Banka e ka marrë aplikimin
+Kërkesa: 3 000 USD për rimbushje stoku
+Marrësi: banka partnere · skenar ilustrues
+Përditësimi i fundit: 28 shtator 2026, 10:05
+
+Historiku
+10:00 · MarketOne ruajti aplikimin për dërgim
+10:05 · Banka konfirmoi marrjen
+
+Hapi i radhës
+Banka do ta shqyrtojë aplikimin.
+Nuk kërkohet veprim nga ju në këtë moment.
+Koha e përgjigjes nuk është konfirmuar.
+
+[ Shiko aplikimin e dërguar ] [ Kthehu te paneli ]</pre></figure>
+<p>Referenca e MarketOne shfaqet që në regjistrimin e dërgimit. Referenca e bankës shtohet vetëm kur merret. “Banka e ka marrë” kërkon konfirmim nga banka; një klikim i suksesshëm në UI nuk mjafton.</p>
+<p>Paketa e dorëzuar mbetet e lexueshme si version historik. Dokumentet shtesë lidhen me të njëjtin aplikim; nuk e ndryshojnë në heshtje versionin e dërguar.</p>
+<h3>Ekrani H — Banka kërkon informacion</h3>
+<figure class="screen"><figcaption>SKICË STATIKE · VEPRIMET JANË ILUSTRUESE</figcaption><pre>Aplikimi MO-DEMO-024
+Kërkohet informacion shtesë
+
+Mesazh nga banka
+Ju lutemi dërgoni dokumentin e qarkullimit për periudhën
+e kërkuar në mesazhin e bankës.
+
+Dokumenti i kërkuar             Ende pa dokument
+[ Shto dokument ]
+
+Para përgjigjes: kontrolloni skedarin dhe marrësin.
+[ Dërgo përgjigjen te banka ]
+[ Kthehu te paneli ]</pre></figure>
+<p>Në produkt, mesazhi përfshin periudhën dhe afatin e saktë nëse banka i ka dhënë. Përgjigjja ka rishikimin dhe autorizimin e vet për dokumentin e ri. Statusi mbetet “Kërkohet informacion” derisa banka të konfirmojë marrjen e përgjigjes. Dështimi i dërgimit nuk fshin dokumentin e ruajtur.</p></section><section id="section-4" aria-labelledby="section-4-title"><h2 id="section-4-title">04 — Gjendjet e aplikimit dhe rikuperimi</h2><div class="table-wrap"><table><thead><tr><th scope="col">Gjendja</th><th scope="col">Çfarë kupton operatori</th><th scope="col">Veprimi</th></tr></thead><tbody><tr><td>Draft</td><td>Kërkesa është e papërfunduar dhe nuk është dërguar.</td><td>Vazhdo ose fshi draftin me konfirmim.</td></tr><tr><td>Duke u dërguar</td><td>MarketOne e ka regjistruar kërkesën; pritet konfirmim nga banka.</td><td>Shiko detajet; mos nis një aplikim të dytë.</td></tr><tr><td>Marrja nuk është konfirmuar</td><td>Ka problem komunikimi; rezultati mund të jetë ende i panjohur.</td><td>Kontrollo statusin; riprovimi përdor të njëjtën referencë.</td></tr><tr><td>Marrë nga banka</td><td>Banka ka konfirmuar marrjen.</td><td>Shiko aplikimin dhe historikun.</td></tr><tr><td>Në shqyrtim</td><td>Banka ka raportuar fillimin e shqyrtimit.</td><td>Shiko statusin; nuk premtohet afat.</td></tr><tr><td>Kërkohet informacion</td><td>Banka ka kërkuar të dhëna të tjera.</td><td>Plotëso kërkesën konkrete.</td></tr><tr><td>Miratuar</td><td>Banka ka komunikuar një vendim pozitiv dhe kushtet përkatëse.</td><td>Shiko vendimin dhe hapat e konfirmuar nga banka.</td></tr><tr><td>Refuzuar</td><td>Banka ka komunikuar vendim negativ.</td><td>Shiko arsyen, nëse është dhënë, dhe kontaktin e bankës.</td></tr></tbody></table></div>
+<p><strong>Miratimi nuk është disbursim.</strong> Shuma e kërkuar nuk paraqitet si shumë e miratuar. Nënshkrimi i kontratës, pranimi i kushteve dhe lëvrimi i fondeve mbeten jashtë këtij koncepti. Nëse banka nuk jep arsye refuzimi, MarketOne nuk sajon një të tillë.</p>
+<p><strong>Ndërprerje sesioni:</strong> pas hyrjes së sigurt, operatori rifillon draftin e fundit të konfirmuar. Dokumentet financiare nuk ruhen në localStorage. Mesazhet e gabimit nuk përmbajnë të dhëna të një biznesi tjetër.</p>
+<p><strong>Aksesueshmëri:</strong> etiketat mbeten të dukshme; gabimet lidhen me fushën dhe mblidhen në një përmbledhje të fokusueshme; njoftimet e ruajtjes dhe statusit lexohen nga teknologjitë ndihmëse. Statusi ka tekst dhe nuk dallohet vetëm nga ngjyra. Navigimi me tastierë dhe zmadhimi nuk pengojnë veprimin kryesor.</p></section><section id="section-5" aria-labelledby="section-5-title"><h2 id="section-5-title">05 — Si transmetohet kërkesa te banka</h2><figure class="flow"><figcaption>RRJEDHA E PROPOZUAR · INTEGRIMI NUK ËSHTË IMPLEMENTUAR</figcaption><pre>OPERATORI
+Rishikon paketën dhe autorizon ndarjen
+        ↓
+MARKETONE · SERVERI
+Verifikon sesionin, biznesin, lejet, fushat dhe dokumentet
+Ruan versionin e aplikimit dhe provën e autorizimit
+Regjistron punën e dërgimit me referencë të qëndrueshme
+        ↓ lidhje e enkriptuar dhe e autentikuar
+BANKA · NDËRFAQJA E DAKORDËSUAR
+Konfirmon marrjen → vlerëson → kërkon sqarime / vendos
+        ↓ përditësime të autentikuara
+MARKETONE · HISTORIKU DHE PANELI
+Shfaq statusin e raportuar dhe veprimin e ardhshëm</pre></figure>
+<p>Ky është <strong>dizajn i propozuar për prodhim</strong>, jo provë e një integrimi ose sigurie të implementuar.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Pjesa e paketës</th><th scope="col">Përmbajtja dhe burimi</th></tr></thead><tbody><tr><td>Identifikimi</td><td>Referenca, versioni, koha e dorëzimit dhe banka marrëse.</td></tr><tr><td>Biznesi dhe aplikuesi</td><td>Të dhënat e konfirmuara të biznesit, identiteti dhe autorizimi i përfaqësuesit.</td></tr><tr><td>Kërkesa</td><td>Shuma, monedha, qëllimi dhe periudha e preferuar.</td></tr><tr><td>Financat e deklaruara</td><td>Shifrat, periudha dhe shënimi që janë dhënë nga aplikuesi.</td></tr><tr><td>Aktiviteti i MarketOne</td><td>Raporti i autorizuar me burim, periudhë dhe monedhë; dallohet nga deklarimet.</td></tr><tr><td>Dokumentet</td><td>Inventari i dokumenteve të kontrolluara dhe transferimi ose referencat e mbrojtura sipas kontratës me bankën.</td></tr><tr><td>Autorizimi</td><td>Kush autorizoi, kur, për cilin marrës dhe për cilin version të paketës.</td></tr></tbody></table></div>
+<p><strong>Kontrollet e nevojshme:</strong></p>
+<ul><li>Serveri verifikon lidhjen e përdoruesit me biznesin në çdo lexim, ndryshim dhe dërgim. Stafi pa leje financimi dhe bizneset e tjera nuk marrin akses.</li><li>Transmetimi bëhet nga serveri përmes ndërfaqes së autentikuar të bankës. Kredencialet nuk vendosen në browser; kërkohet enkriptim gjatë transmetimit dhe në ruajtje.</li><li>Dokumentet ruhen privatisht, me kontroll formati, madhësie dhe përmbajtjeje të dëmshme. Aksesi është i kufizuar; nuk përdoren lidhje publike.</li><li>Dërgimi përdor një identifikues të qëndrueshëm kundër dublikimit. Në timeout kontrollohet statusi para ridërgimit; banka duhet të mbështesë deduplikim ose pajtim të referencës.</li><li>Përditësimet e bankës autentikohen dhe lidhen me aplikimin përkatës. Ngjarjet e dyfishta ose të ardhura jashtë radhe nuk duhet ta kthejnë statusin prapa. Pa webhook, përdoret kontroll statusi nga serveri sipas kontratës.</li><li>Historiku regjistron aktorin, veprimin, kohën, referencën dhe ndryshimin e statusit. Përmbajtja e dokumenteve, sekretet dhe të dhënat e panevojshme personale nuk shkruhen në log.</li><li>Njoftimet jashtë portalit thonë se ka përditësim dhe e drejtojnë operatorin te hyrja e sigurt; nuk përmbajnë dokumente ose hollësi financiare.</li><li>Afatet e ruajtjes, fshirja, baza për përpunimin e të dhënave dhe teksti i autorizimit përcaktohen me bankën përpara prodhimit. Kutia e autorizimit nuk paraqitet si provë e përmbushjes së çdo detyrimi ligjor.</li></ul>
+<p><strong>Ndërfaqet minimale të ardhshme:</strong> lexim i përmbledhjes së biznesit; krijim/përditësim/rifillim drafti; ngarkim dhe status kontrolli dokumenti; dorëzim i versionit të autorizuar; lexim i statusit/historikut; përgjigje ndaj kërkesës së bankës. Adapter-i bankar ka përgjegjësi të ndara për dërgimin, konfirmimin dhe sinkronizimin e statusit. Emrat e endpoint-eve dhe kontrata përfundimtare nuk shpiken para zgjedhjes së bankës.</p></section><section id="section-6" aria-labelledby="section-6-title"><h2 id="section-6-title">06 — Prioritetet dhe kufijtë</h2><div class="table-wrap"><table><thead><tr><th scope="col">Prioriteti</th><th scope="col">Çfarë përfshihet</th><th scope="col">Pse</th></tr></thead><tbody><tr><td>P0 · Kuptim dhe veprim</td><td>Paneli me detyra, aktivitet, burim të dhënash dhe gjendje bosh/gabimi.</td><td>E bën hyrjen në platformë të dobishme çdo ditë.</td></tr><tr><td>P0 · Kërkesë e plotë</td><td>Profil i ripërdorshëm, draft, formular me hapa, dokumente dhe rishikim.</td><td>Ndihmon operatorin ta përfundojë aplikimin.</td></tr><tr><td>P0 · Besim në proces</td><td>Banka marrëse, autorizimi, konfirmimi i marrjes, statusi dhe përgjigjet.</td><td>Operatori kupton ku janë të dhënat dhe kush duhet të veprojë.</td></tr><tr><td>P1 · Përmirësim pas validimit</td><td>Filtra më të hollësishëm, raporte të eksportueshme dhe kujtesa të konfigurueshme.</td><td>Vlerësohen pasi të provohet rrjedha bazë.</td></tr><tr><td>Jashtë versionit të parë</td><td>Scoring, vendime automatike kredie, krahasim bankash, lidhje me kasën/ERP, analitikë e avancuar.</td><td>Kërkojnë të dhëna dhe integrime që ky koncept nuk i supozon.</td></tr></tbody></table></div>
+<p>Ky dorëzim përmban skica dhe specifikim sjelljeje. Nuk shton autentikim real, backend financiar, ruajtje draftesh, ngarkim dokumentesh ose lidhje bankare në aplikacionin ekzistues. Hapat e nënshkrimit, disbursimit dhe shlyerjes janë jashtë skenarit.</p></section><section id="section-7" aria-labelledby="section-7-title"><h2 id="section-7-title">07 — Si vlerësohet koncepti</h2><p>Këto janë skenarë të planifikuar për validim, jo rezultate të testimit me përdorues.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Detyra</th><th scope="col">Kriteri i suksesit</th></tr></thead><tbody><tr><td>Hyr në panel dhe gjej veprimin e radhës.</td><td>Operatori gjen detyrën prioritare dhe shpjegon pse ka përparësi.</td></tr><tr><td>Shpjego shifrat e panelit.</td><td>Dallon aktivitetin e MarketOne nga i gjithë biznesi dhe pagesat e pritshme nga fitimi/bilanci.</td></tr><tr><td>Hyr si biznes i ri.</td><td>Gjen hapin e konfigurimit dhe informacionin për financim pa interpretuar mungesën e historikut si refuzim.</td></tr><tr><td>Plotëso, ndërprit dhe rifillo aplikimin.</td><td>Rikthehet te drafti i ruajtur pa ripërsëritur të dhënat e konfirmuara.</td></tr><tr><td>Jep informacion financiar.</td><td>Kupton burimin dhe periudhën e deklarimeve dhe shmang numërimin e dyfishtë të shitjeve.</td></tr><tr><td>Rishiko dërgimin.</td><td>Identifikon bankën, të dhënat që ndahen dhe rolin vendimmarrës të bankës; autorizimi nuk është i parazgjedhur.</td></tr><tr><td>Ngarko një skedar të papranueshëm ose ndërprit ngarkimin.</td><td>Sheh arsyen dhe rikuperon pa humbur formularin.</td></tr><tr><td>Simulo timeout pas dërgimit.</td><td>Nuk shfaqet marrje e rreme ose aplikim i dytë; ruhet e njëjta referencë.</td></tr><tr><td>Përgjigju një kërkese dokumenti.</td><td>E gjen nga paneli, rishikon dokumentin e ri dhe kupton nëse banka e ka marrë.</td></tr><tr><td>Lexo miratimin/refuzimin.</td><td>Nuk e ngatërron miratimin me fonde të marra; nuk sheh arsye ose afate të sajuara.</td></tr><tr><td>Përdor telefon, tastierë dhe zmadhim.</td><td>Rendi i leximit është i qartë dhe çdo fushë/gabim/veprim është i arritshëm.</td></tr></tbody></table></div>
+<p>Për implementimin e ardhshëm, testet e integrimit duhet të provojnë izolimin mes bizneseve, lejet e stafit, refuzimin e dokumenteve të pasigurta, deduplikimin e dërgimit dhe mospranimin e përditësimeve bankare të paautentikuara. Demonstrimi duhet të përdorë dokumente sintetike dhe një bankë të simuluar.</p></section><section id="section-8" aria-labelledby="section-8-title"><h2 id="section-8-title">08 — Supozimet dhe vendimet përpara prodhimit</h2><ul><li>Audienca është një dyqan i vogël i pavarur; skenari përdor pronaren si operatore.</li><li>UI-ja dhe dokumentimi mbeten në shqip, në përputhje me materialet ekzistuese.</li><li>MarketOne shfaq aktivitetin e vet. Nuk supozohet integrim me bankën, kontabilitetin ose kasën për të lexuar gjithë biznesin.</li><li>Një bankë partnere përdoret në skenar. Emri, produkti, juridiksioni, monedha, kufijtë dhe dokumentet duhet të konfirmohen; dërgimi real varet nga këto.</li><li>USD dhe periudha 12 muaj janë vetëm ilustrime. Nuk janë ofertë financiare.</li><li>Gjendjet e këtij koncepti duhet të lidhen me statuset reale të bankës; nuk nxirren nga pritja ose nga supozimi i MarketOne.</li><li>Asnjë test përdoruesish, kontroll sigurie në prodhim ose integrim bankar nuk pretendohet si i kryer.</li></ul></section><section id="section-9" aria-labelledby="section-9-title"><h2 id="section-9-title">09 — Çfarë u dorëzua</h2><p>Dokumenti i lexueshëm HTML dhe burimi Markdown përmbajnë tetë skica ekranesh, shpjegimet e vendimeve, gjendjet e gabimit, rrjedhën e bankës dhe kriteret e validimit. Lidhjet e përmbajtjes në HTML shërbejnë për navigim; kontrollet brenda skicave janë ilustrime.</p>
+<p>Prototipi i katalogut dhe propozimi teknik i mëparshëm mbeten materiale historike të drejtimit fillestar. Ky koncept është referenca e re për prioritetet e produktit dhe për dy rrjedhat e kërkuara.</p>
+<p><strong>Përdorimi i AI-së:</strong> Codex inspektoi materialet ekzistuese dhe përgatiti tekstin, skicat dhe paketimin. Zgjedhjet për llojin e dorëzimit, tregtarin e vogël dhe aktivitetin e MarketOne u konfirmuan nga përdoruesi. Nuk pretendohet validim personal ose testim me tregtarë në emër të kandidatit.</p></section><footer>MarketOne · Koncepti i rishikuar · Të dhëna ilustruese · Pa integrim bankar aktiv</footer></main></div></body></html>
